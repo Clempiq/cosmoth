@@ -20,8 +20,8 @@
     "vn_joueurs": "en solo, ou jusqu'à 4 sur un écran ou en ligne",
     "f_contenu": "Contenu",
     "vn_contenu": "9 missions, 15 survivants, 16 armes",
-    "f_langue": "Langue",
-    "vn_langue": "français",
+    "f_langue": "Langues",
+    "vn_langue": "français, anglais",
     "vn_cta": "Jouer à Veille Noire",
     "footer": "Studio indépendant, fait en France. © 2026",
     "lang_label": "Langue"
@@ -47,8 +47,8 @@
     "vn_joueurs": "solo, or up to 4 on one screen or online",
     "f_contenu": "Content",
     "vn_contenu": "9 missions, 15 survivors, 16 weapons",
-    "f_langue": "Language",
-    "vn_langue": "French only for now",
+    "f_langue": "Languages",
+    "vn_langue": "English, French",
     "vn_cta": "Play Veille Noire",
     "footer": "Independent studio, made in France. © 2026",
     "lang_label": "Language"
@@ -74,8 +74,8 @@
     "vn_joueurs": "en solitario, o hasta 4 en una pantalla o en línea",
     "f_contenu": "Contenido",
     "vn_contenu": "9 misiones, 15 supervivientes, 16 armas",
-    "f_langue": "Idioma",
-    "vn_langue": "por ahora solo en francés",
+    "f_langue": "Idiomas",
+    "vn_langue": "francés, inglés",
     "vn_cta": "Jugar a Veille Noire",
     "footer": "Estudio independiente, hecho en Francia. © 2026",
     "lang_label": "Idioma"

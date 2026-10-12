@@ -12,7 +12,7 @@ const LANGS = {
 const GAMES = [
   { name: 'Songe', url: 'https://songe-jeu.vercel.app/', image: 'https://songe-jeu.vercel.app/og.jpg', desc: 'songe_pitch', langs: ['fr', 'en', 'es'],
     genre: { fr: "Jeu d'ambiance", en: 'Party game', es: 'Juego de fiesta' } },
-  { name: 'Veille Noire', url: 'https://veille-noire.vercel.app/', image: 'https://veille-noire.vercel.app/assets/og.jpg', desc: 'vn_pitch', langs: ['fr'],
+  { name: 'Veille Noire', url: 'https://veille-noire.vercel.app/', image: 'https://veille-noire.vercel.app/assets/og.jpg', desc: 'vn_pitch', langs: ['fr', 'en'],
     genre: { fr: 'Jeu de plateau coopératif', en: 'Cooperative board game', es: 'Juego de tablero cooperativo' } },
 ];
 const page = await fs.readFile('src/page.html', 'utf8');

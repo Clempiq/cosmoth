@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="theme-color" content="#1A1840">
+<link rel="canonical" href="{{url}}">
+{{alternates}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cosmoth">
+<meta property="og:locale" content="{{locale}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{og_description}}">
+<meta property="og:image" content="{{site}}/assets/{{og_image}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{og_image_alt}}">
+<meta name="twitter:card" content="summary_large_image">
+{{jsonld}}
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Young Serif";src:url(/assets/young-serif-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Figtree;font-weight:400;src:url(/assets/figtree-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Figtree;font-weight:600;src:url(/assets/figtree-latin-600-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Syne;font-weight:800;src:url(/assets/syne-latin-800-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Barlow Condensed";font-weight:800;src:url(/assets/barlow-condensed-latin-800-normal.woff2) format("woff2");font-display:swap}
+
+:root{
+  --nuit:#1A1840;
+  --nuit-profonde:#110F2B;
+  --lune:#F2EAD3;
+  --brume:#A6A2CC;
+  --lampe:#FFC93C;
+  --lagune:#4FE0D2;
+  --serif:"Young Serif",Georgia,serif;
+  --sans:Figtree,system-ui,sans-serif;
+  --marge:clamp(20px,6vw,88px);
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--nuit);color-scheme:dark;overflow-x:clip}
+body{background:var(--nuit);color:var(--lune);font-family:var(--sans);font-size:clamp(17px,1.1vw + 12px,20px);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lampe);outline-offset:4px;border-radius:6px}
+
+/* ---------- Accueil : la lampe et le papillon ---------- */
+.accueil{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--marge);padding-bottom:clamp(48px,10vh,120px);overflow:hidden;isolation:isolate;touch-action:pan-y}
+.accueil::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(circle at var(--lx,72%) var(--ly,34%),rgba(255,201,60,.34) 0,rgba(255,201,60,.12) 9rem,rgba(255,201,60,0) 22rem),
+    radial-gradient(120% 80% at 50% 0%,#24205A 0%,var(--nuit) 60%)}
+.ciel{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.ciel i{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--lune);opacity:.5}
+.papillon{position:absolute;left:0;top:0;width:clamp(44px,5vw,64px);pointer-events:none;will-change:transform;z-index:1;filter:drop-shadow(0 0 14px rgba(255,201,60,.35))}
+.papillon .aile-g,.papillon .aile-d{transform-box:fill-box;animation:battement .16s ease-in-out infinite alternate}
+.papillon .aile-g{transform-origin:100% 50%}
+.papillon .aile-d{transform-origin:0% 50%}
+@keyframes battement{from{transform:scaleX(1)}to{transform:scaleX(.35)}}
+.langues{position:absolute;top:calc(var(--marge) * .6);right:var(--marge);display:flex;gap:4px;z-index:2}
+.langues a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 8px;border-radius:10px;font-size:14px;font-weight:600;letter-spacing:.04em;text-decoration:none;color:var(--brume)}
+.langues a:hover{color:var(--lune)}
+.langues a[aria-current]{color:var(--lune);box-shadow:inset 0 -2px 0 var(--lampe);border-radius:0}
+.marque{font-family:var(--serif);font-weight:400;font-size:clamp(64px,15vw,220px);line-height:.88;letter-spacing:-.02em}
+.accroche{max-width:34ch;margin-top:clamp(18px,3vh,32px);font-size:clamp(19px,1.4vw + 12px,26px);line-height:1.4;color:var(--lune)}
+.astuce{margin-top:16px;color:var(--brume);font-size:15px}
+.sommaire{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,5vh,48px)}
+.sommaire a{text-decoration:none;padding:10px 18px;border-radius:999px;border:1px solid rgba(242,234,211,.28);font-weight:600;font-size:16px}
+.sommaire a:hover{border-color:var(--lampe);color:var(--lampe)}
+
+/* ---------- Jeux ---------- */
+.jeu{position:relative;padding:clamp(72px,12vh,140px) var(--marge)}
+.jeu h2{line-height:.9}
+.jeu .pitch{max-width:40ch;margin-top:22px;font-size:clamp(18px,1.1vw + 12px,22px);line-height:1.45}
+.faits{display:grid;grid-template-columns:max-content 1fr;gap:6px 20px;margin-top:28px;max-width:44ch;font-size:16px}
+.faits dt{color:var(--brume)}
+.faits dd{margin:0}
+.jouer{display:inline-flex;align-items:center;min-height:52px;margin-top:34px;padding:0 26px;border-radius:14px;font-weight:600;font-size:17px;text-decoration:none}
+
+/* Songe : ses propres couleurs, sa propre lettre */
+.songe{background:#14131F;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(32px,5vw,80px)}
+.songe h2{font-family:Syne,var(--sans);font-weight:800;font-size:clamp(56px,8vw,112px);color:#FFC93C;letter-spacing:-.03em}
+.songe .jouer{background:#FFC93C;color:#14131F}
+.songe .jouer:hover{background:#ffd666}
+.eventail{position:relative;aspect-ratio:1/1;width:100%;max-width:600px;justify-self:center}
+.eventail img{position:absolute;left:50%;top:50%;width:44%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.55);transform-origin:50% 100%;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.eventail img:nth-child(1){transform:translate(-50%,-50%) rotate(-20deg)}
+.eventail img:nth-child(2){transform:translate(-50%,-50%) rotate(-10deg)}
+.eventail img:nth-child(3){transform:translate(-50%,-50%) rotate(10deg)}
+.eventail img:nth-child(4){transform:translate(-50%,-50%) rotate(20deg)}
+.eventail img:nth-child(5){transform:translate(-50%,-53%)}
+.eventail:hover img:nth-child(1){transform:translate(-50%,-50%) rotate(-26deg)}
+.eventail:hover img:nth-child(2){transform:translate(-50%,-50%) rotate(-13deg)}
+.eventail:hover img:nth-child(3){transform:translate(-50%,-50%) rotate(13deg)}
+.eventail:hover img:nth-child(4){transform:translate(-50%,-50%) rotate(26deg)}
+
+/* Veille Noire : le port de Nacre en fond */
+.veille{background:#0B1414 url(/assets/nacre.webp) 70% 50%/cover no-repeat;min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;color:#EAF2F0}
+.veille::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,11,12,.95) 0%,rgba(5,11,12,.82) 45%,rgba(5,11,12,.15) 85%)}
+.veille>*{position:relative}
+.veille h2{font-family:"Barlow Condensed",var(--sans);font-weight:800;font-size:clamp(64px,9vw,128px);text-transform:uppercase;letter-spacing:.01em}
+.veille .sous-titre{font-family:var(--serif);color:var(--lagune);font-size:clamp(20px,1.5vw + 12px,28px);margin-top:12px}
+.veille .faits dt{color:#9FBDB9}
+.veille .jouer{background:var(--lagune);color:#06201E}
+.veille .jouer:hover{background:#7DEBE1}
+.equipe{display:flex;align-items:center;margin-top:36px}
+.equipe img{width:clamp(56px,6vw,76px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:3px solid #0B1414;margin-left:-14px}
+.equipe img:first-child{margin-left:0}
+
+/* ---------- Pied de page ---------- */
+.pied{background:var(--nuit-profonde);padding:56px var(--marge) calc(56px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;color:var(--brume);font-size:15px}
+.pied .nom{display:flex;align-items:center;gap:12px;font-family:var(--serif);color:var(--lune);font-size:24px}
+.pied svg{width:34px}
+
+@media (max-width:820px){
+  .songe{grid-template-columns:1fr}
+  .eventail{max-width:340px;order:-1}
+  .veille{background-position:62% 50%}
+  .veille::before{background:linear-gradient(180deg,rgba(5,11,12,.55) 0%,rgba(5,11,12,.88) 55%,rgba(5,11,12,.95) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .papillon .aile-g,.papillon .aile-d{animation:none}
+  .eventail img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="accueil" id="accueil">
+  <nav class="langues" aria-label="{{lang_label}}">{{lang_links}}</nav>
+  <div class="ciel" aria-hidden="true"></div>
+  <svg class="papillon" id="papillon" viewBox="0 0 64 48" aria-hidden="true">
+    <g class="aile-g">
+      <path d="M31 22 C22 4 4 2 3 12 C2 22 16 26 31 24 Z" fill="#F2EAD3"/>
+      <path d="M31 26 C20 28 8 34 12 42 C16 48 27 38 31 28 Z" fill="#D9CFB2"/>
+      <circle cx="14" cy="13" r="3.2" fill="#FFC93C"/>
+    </g>
+    <g class="aile-d">
+      <path d="M33 22 C42 4 60 2 61 12 C62 22 48 26 33 24 Z" fill="#F2EAD3"/>
+      <path d="M33 26 C44 28 56 34 52 42 C48 48 37 38 33 28 Z" fill="#D9CFB2"/>
+      <circle cx="50" cy="13" r="3.2" fill="#FFC93C"/>
+    </g>
+    <ellipse cx="32" cy="26" rx="2.6" ry="11" fill="#3A3570"/>
+    <path d="M31 16 C28 10 25 8 22 7 M33 16 C36 10 39 8 42 7" stroke="#F2EAD3" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <h1 class="marque">Cosmoth</h1>
+  <p class="accroche">{{accroche}}</p>
+  <p class="astuce" id="astuce">{{astuce}}</p>
+  <nav class="sommaire" aria-label="{{nav_label}}">
+    <a href="#songe">Songe</a>
+    <a href="#veille-noire">Veille Noire</a>
+  </nav>
+</header>
+
+<main>
+  <section class="jeu songe" id="songe" aria-labelledby="titre-songe">
+    <div>
+      <h2 id="titre-songe">Songe</h2>
+      <p class="pitch">{{songe_pitch}}</p>
+      <dl class="faits">
+        <dt>{{f_joueurs}}</dt><dd>{{songe_joueurs}}</dd>
+        <dt>{{f_cartes}}</dt><dd>{{songe_cartes}}</dd>
+        <dt>{{f_langues}}</dt><dd>{{songe_langues}}</dd>
+      </dl>
+      <a class="jouer" href="https://songe-jeu.vercel.app/">{{songe_cta}}</a>
+    </div>
+    <div class="eventail" aria-hidden="true">
+      <img src="/assets/songe-12.webp" alt="" width="432" height="768" loading="lazy">
+      <img src="/assets/songe-18.webp" alt="" width="432" height="768" loading="lazy">
+      <img src="/assets/songe-44.webp" alt="" width="432" height="768" loading="lazy">
+      <img src="/assets/songe-7.webp" alt="" width="432" height="768" loading="lazy">
+      <img src="/assets/songe-29.webp" alt="" width="432" height="768" loading="lazy">
+    </div>
+  </section>
+
+  <section class="jeu veille" id="veille-noire" aria-labelledby="titre-veille">
+    <h2 id="titre-veille">Veille Noire</h2>
+    <p class="sous-titre">Les derniers de Nacre</p>
+    <p class="pitch">{{vn_pitch}}</p>
+    <dl class="faits">
+      <dt>{{f_joueurs}}</dt><dd>{{vn_joueurs}}</dd>
+      <dt>{{f_contenu}}</dt><dd>{{vn_contenu}}</dd>
+      <dt>{{f_langue}}</dt><dd>{{vn_langue}}</dd>
+    </dl>
+    <div class="equipe" aria-hidden="true">
+      <img src="/assets/survivant-1.webp" alt="" width="360" height="360">
+      <img src="/assets/survivant-2.webp" alt="" width="360" height="360">
+      <img src="/assets/survivant-3.webp" alt="" width="360" height="360">
+      <img src="/assets/survivant-4.webp" alt="" width="360" height="360">
+    </div>
+    <a class="jouer" href="https://veille-noire.vercel.app/">{{vn_cta}}</a>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="nom">
+    <svg viewBox="0 0 64 48" aria-hidden="true"><path d="M31 22 C22 4 4 2 3 12 C2 22 16 26 31 24 Z M33 22 C42 4 60 2 61 12 C62 22 48 26 33 24 Z" fill="#F2EAD3"/><path d="M31 26 C20 28 8 34 12 42 C16 48 27 38 31 28 Z M33 26 C44 28 56 34 52 42 C48 48 37 38 33 28 Z" fill="#D9CFB2"/><ellipse cx="32" cy="26" rx="2.6" ry="11" fill="#FFC93C"/></svg>
+    Cosmoth
+  </div>
+  <p>{{footer}}</p>
+</footer>
+
+<script>
+(() => {
+  const hero = document.getElementById('accueil');
+  const moth = document.getElementById('papillon');
+  const sky = hero.querySelector('.ciel');
+  const calme = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Quelques étoiles, placées une fois pour toutes
+  for (let i = 0; i < 46; i++) {
+    const s = document.createElement('i');
+    s.style.left = (Math.random() * 100) + '%';
+    s.style.top = (Math.random() * 70) + '%';
+    s.style.opacity = (0.15 + Math.random() * 0.5).toFixed(2);
+    sky.appendChild(s);
+  }
+
+  if (matchMedia('(pointer: coarse)').matches) document.getElementById('astuce').textContent = {{astuce_touch_js}};
+  let W = hero.clientWidth, H = hero.clientHeight;
+  // La lampe démarre en haut à droite, loin du texte
+  let lamp = { x: W * 0.72, y: H * 0.34 };
+  const pos = { x: W * 0.3, y: H * 0.2 }, vel = { x: 0, y: 0 };
+  let angle = 0, cap = 0, bouge = false;
+
+  const poser = (x, y) => {
+    lamp.x = x; lamp.y = y;
+    hero.style.setProperty('--lx', x + 'px');
+    hero.style.setProperty('--ly', y + 'px');
+  };
+  poser(lamp.x, lamp.y);
+
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    poser(e.clientX - r.left, e.clientY - r.top);
+    if (!bouge) { bouge = true; document.getElementById('astuce').style.visibility = 'hidden'; }
+  });
+  hero.addEventListener('pointerdown', e => {
+    const r = hero.getBoundingClientRect();
+    poser(e.clientX - r.left, e.clientY - r.top);
+  });
+  addEventListener('resize', () => { W = hero.clientWidth; H = hero.clientHeight; });
+
+  if (calme) {
+    // Mouvement réduit : le papillon reste posé près de la lampe
+    moth.style.transform = `translate(${lamp.x + 30}px, ${lamp.y - 50}px)`;
+    return;
+  }
+
+  let visible = true;
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) requestAnimationFrame(vol); }).observe(hero);
+
+  let t0 = performance.now();
+  function vol(t) {
+    if (!visible) return;
+    const dt = Math.min((t - t0) / 16.7, 3); t0 = t;
+    angle += 0.045 * dt;
+    // Les papillons de nuit tournent autour de la lumière plutôt que de s'y poser
+    const rayon = 46 + Math.sin(angle * 1.7) * 18;
+    const cx = lamp.x + Math.cos(angle) * rayon;
+    const cy = lamp.y + Math.sin(angle * 1.3) * rayon * 0.7;
+    vel.x += ((cx - pos.x) * 0.012 + (Math.random() - 0.5) * 0.6) * dt;
+    vel.y += ((cy - pos.y) * 0.012 + (Math.random() - 0.5) * 0.6) * dt;
+    vel.x *= 0.9; vel.y *= 0.9;
+    pos.x += vel.x * dt; pos.y += vel.y * dt;
+    const vise = Math.atan2(vel.y, vel.x) * 180 / Math.PI + 90;
+    cap += (((vise - cap + 540) % 360) - 180) * 0.12;
+    const w = moth.getBoundingClientRect().width;
+    moth.style.transform = `translate(${pos.x - w / 2}px, ${pos.y - w / 2}px) rotate(${cap * 0.35}deg)`;
+    requestAnimationFrame(vol);
+  }
+  requestAnimationFrame(vol);
+})();
+</script>
+</body>
+</html>

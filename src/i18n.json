@@ -24,12 +24,15 @@
     "vn_langue": "français, anglais",
     "vn_cta": "Jouer à Veille Noire",
     "footer": "Studio indépendant, fait en France. © 2026",
-    "lang_label": "Langue"
+    "lang_label": "Langue",
+    "vn_name": "Veille Noire",
+    "vn_subtitle": "Les derniers de Nacre",
+    "vn_url": "https://veille-noire.vercel.app/"
   },
   "en": {
     "title": "Cosmoth, games for evenings with friends",
-    "description": "Cosmoth is a small independent studio making games for evenings with friends: Songe and Veille Noire, played right in your browser, no account needed.",
-    "og_description": "Songe and Veille Noire, two games you play right in your browser, with nothing to install and no account to create.",
+    "description": "Cosmoth is a small independent studio making games for evenings with friends: Songe and Black Vigil, played right in your browser, no account needed.",
+    "og_description": "Songe and Black Vigil, two games you play right in your browser, with nothing to install and no account to create.",
     "og_image_alt": "The Cosmoth moth drawn to a lamp",
     "accroche": "A small independent studio making games for evenings with friends. They run in your browser, with nothing to install and no account to create.",
     "astuce": "Move the light, the moth will follow.",
@@ -49,14 +52,17 @@
     "vn_contenu": "9 missions, 15 survivors, 16 weapons",
     "f_langue": "Languages",
     "vn_langue": "English, French",
-    "vn_cta": "Play Veille Noire",
+    "vn_cta": "Play Black Vigil",
     "footer": "Independent studio, made in France. © 2026",
-    "lang_label": "Language"
+    "lang_label": "Language",
+    "vn_name": "Black Vigil",
+    "vn_subtitle": "The Last of Nacre",
+    "vn_url": "https://veille-noire.vercel.app/?lang=en"
   },
   "es": {
     "title": "Cosmoth, juegos para noches con amigos",
-    "description": "Cosmoth es un pequeño estudio independiente que crea juegos para noches con amigos: Songe y Veille Noire, para jugar directamente en el navegador, sin cuenta.",
-    "og_description": "Songe y Veille Noire, dos juegos para jugar en el navegador, sin instalar nada ni crear una cuenta.",
+    "description": "Cosmoth es un pequeño estudio independiente que crea juegos para noches con amigos: Songe y Black Vigil, para jugar directamente en el navegador, sin cuenta.",
+    "og_description": "Songe y Black Vigil, dos juegos para jugar en el navegador, sin instalar nada ni crear una cuenta.",
     "og_image_alt": "La polilla de Cosmoth atraída por una lámpara",
     "accroche": "Un pequeño estudio independiente que hace juegos para noches con amigos. Se juegan en el navegador, sin instalar nada ni crear una cuenta.",
     "astuce": "Mueve la luz, la polilla la seguirá.",
@@ -76,8 +82,11 @@
     "vn_contenu": "9 misiones, 15 supervivientes, 16 armas",
     "f_langue": "Idiomas",
     "vn_langue": "francés, inglés",
-    "vn_cta": "Jugar a Veille Noire",
+    "vn_cta": "Jugar a Black Vigil",
     "footer": "Estudio independiente, hecho en Francia. © 2026",
-    "lang_label": "Idioma"
+    "lang_label": "Idioma",
+    "vn_name": "Black Vigil",
+    "vn_subtitle": "The Last of Nacre",
+    "vn_url": "https://veille-noire.vercel.app/?lang=en"
   }
 }

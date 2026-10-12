@@ -126,6 +126,8 @@ a{color:inherit}
   .eventail img{transition:none}
 }
 </style>
+<!-- Vercel Web Analytics : visites anonymes, sans cookies -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -152,7 +154,7 @@ a{color:inherit}
   <p class="astuce" id="astuce">{{astuce}}</p>
   <nav class="sommaire" aria-label="{{nav_label}}">
     <a href="#songe">Songe</a>
-    <a href="#veille-noire">Veille Noire</a>
+    <a href="#veille-noire">{{vn_name}}</a>
   </nav>
 </header>
 
@@ -178,8 +180,8 @@ a{color:inherit}
   </section>
 
   <section class="jeu veille" id="veille-noire" aria-labelledby="titre-veille">
-    <h2 id="titre-veille">Veille Noire</h2>
-    <p class="sous-titre">Les derniers de Nacre</p>
+    <h2 id="titre-veille">{{vn_name}}</h2>
+    <p class="sous-titre">{{vn_subtitle}}</p>
     <p class="pitch">{{vn_pitch}}</p>
     <dl class="faits">
       <dt>{{f_joueurs}}</dt><dd>{{vn_joueurs}}</dd>
@@ -192,7 +194,7 @@ a{color:inherit}
       <img src="/assets/survivant-3.webp" alt="" width="360" height="360">
       <img src="/assets/survivant-4.webp" alt="" width="360" height="360">
     </div>
-    <a class="jouer" href="https://veille-noire.vercel.app/">{{vn_cta}}</a>
+    <a class="jouer" href="{{vn_url}}">{{vn_cta}}</a>
   </section>
 </main>
 

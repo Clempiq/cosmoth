@@ -12,7 +12,7 @@ const LANGS = {
 const GAMES = [
   { name: 'Songe', url: 'https://songe-jeu.vercel.app/', image: 'https://songe-jeu.vercel.app/og.jpg', desc: 'songe_pitch', langs: ['fr', 'en', 'es'],
     genre: { fr: "Jeu d'ambiance", en: 'Party game', es: 'Juego de fiesta' } },
-  { name: 'Veille Noire', url: 'https://veille-noire.vercel.app/', image: 'https://veille-noire.vercel.app/assets/og.jpg', desc: 'vn_pitch', langs: ['fr', 'en'],
+  { name: 'Veille Noire', nameKey: 'vn_name', urlKey: 'vn_url', url: 'https://veille-noire.vercel.app/', image: 'https://veille-noire.vercel.app/assets/og.jpg', desc: 'vn_pitch', langs: ['fr', 'en'],
     genre: { fr: 'Jeu de plateau coopératif', en: 'Cooperative board game', es: 'Juego de tablero cooperativo' } },
 ];
 const page = await fs.readFile('src/page.html', 'utf8');
@@ -37,7 +37,7 @@ for (const [lang, conf] of Object.entries(LANGS)) {
       '@context': 'https://schema.org',
       '@graph': [
         { '@type': 'Organization', '@id': SITE + '/#studio', name: 'Cosmoth', url: SITE + '/', logo: SITE + '/assets/favicon.svg' },
-        ...GAMES.map((g) => ({ '@type': 'VideoGame', name: g.name, url: g.url, description: t[g.desc], image: g.image,
+        ...GAMES.map((g) => ({ '@type': 'VideoGame', name: g.nameKey ? t[g.nameKey] : g.name, ...(g.nameKey && t[g.nameKey] !== g.name ? { alternateName: g.name } : {}), url: g.urlKey ? t[g.urlKey] : g.url, description: t[g.desc], image: g.image,
           genre: g.genre[lang], gamePlatform: 'Web browser', applicationCategory: 'Game', inLanguage: g.langs,
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, publisher: { '@id': SITE + '/#studio' } })),
       ],

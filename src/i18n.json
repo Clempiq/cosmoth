@@ -1,10 +1,10 @@
 {
   "fr": {
-    "title": "Cosmoth, des jeux pour les soirées entre amis",
-    "description": "Cosmoth est un petit studio indépendant qui crée des jeux pour les soirées entre amis : Songe et Veille Noire, à lancer directement dans le navigateur, sans compte.",
-    "og_description": "Songe et Veille Noire, deux jeux à lancer dans le navigateur, sans rien installer ni créer de compte.",
+    "title": "Cosmoth, des jeux à lancer dans le navigateur",
+    "description": "Cosmoth est un petit studio indépendant qui crée des jeux à lancer directement dans le navigateur, sans compte : Songe, Veille Noire et Royaume de Poche.",
+    "og_description": "Songe, Veille Noire et Royaume de Poche : trois jeux à lancer dans le navigateur, sans rien installer ni créer de compte.",
     "og_image_alt": "Le papillon de nuit de Cosmoth attiré par une lampe",
-    "accroche": "Un petit studio indépendant qui fait des jeux pour les soirées entre amis. Ils se lancent dans le navigateur, sans rien installer ni créer de compte.",
+    "accroche": "Un petit studio indépendant qui fait des jeux à partager entre amis ou à savourer seul. Ils se lancent dans le navigateur, sans rien installer ni créer de compte.",
     "astuce": "Bougez la lumière, le papillon suivra.",
     "astuce_touch": "Touchez le ciel, le papillon suivra la lumière.",
     "nav_label": "Nos jeux",
@@ -27,14 +27,20 @@
     "lang_label": "Langue",
     "vn_name": "Veille Noire",
     "vn_subtitle": "Les derniers de Nacre",
-    "vn_url": "https://veille-noire.vercel.app/"
+    "vn_url": "https://veille-noire.vercel.app/",
+    "rdp_subtitle": "Trois héros, des monstres grincheux et un sceptre en mille morceaux",
+    "rdp_pitch": "Le petit roi Pépin a cassé le Sceptre des Saisons en trébuchant sur le tapis. Menez votre équipe de héros de ville en ville, affrontez les monstres et leurs points faibles, récoltez du butin et battez les champions d'arène. Entre deux villes, la route prend du temps : revenez plus tard, l'aventure continue sans vous.",
+    "rdp_joueurs": "en solo, sur téléphone",
+    "rdp_contenu": "3 villes, 15 monstres, 3 champions d'arène",
+    "rdp_langue": "français",
+    "rdp_cta": "Jouer à Royaume de Poche"
   },
   "en": {
-    "title": "Cosmoth, games for evenings with friends",
-    "description": "Cosmoth is a small independent studio making games for evenings with friends: Songe and Black Vigil, played right in your browser, no account needed.",
-    "og_description": "Songe and Black Vigil, two games you play right in your browser, with nothing to install and no account to create.",
+    "title": "Cosmoth, games that run in your browser",
+    "description": "Cosmoth is a small independent studio making games you play right in your browser, no account needed: Songe, Black Vigil and Royaume de Poche.",
+    "og_description": "Songe, Black Vigil and Royaume de Poche: three games you play right in your browser, with nothing to install and no account to create.",
     "og_image_alt": "The Cosmoth moth drawn to a lamp",
-    "accroche": "A small independent studio making games for evenings with friends. They run in your browser, with nothing to install and no account to create.",
+    "accroche": "A small independent studio making games to share with friends or enjoy on your own. They run in your browser, with nothing to install and no account to create.",
     "astuce": "Move the light, the moth will follow.",
     "astuce_touch": "Tap the sky, the moth will follow the light.",
     "nav_label": "Our games",
@@ -57,14 +63,20 @@
     "lang_label": "Language",
     "vn_name": "Black Vigil",
     "vn_subtitle": "The Last of Nacre",
-    "vn_url": "https://veille-noire.vercel.app/?lang=en"
+    "vn_url": "https://veille-noire.vercel.app/?lang=en",
+    "rdp_subtitle": "Three heroes, grumpy monsters and a scepter in a thousand pieces",
+    "rdp_pitch": "Little King Pépin broke the Scepter of Seasons by tripping on the rug. Lead your team of heroes from town to town, exploit each monster's weakness, collect loot and defeat the arena champions. Travelling between towns takes real time: come back later, the adventure goes on without you.",
+    "rdp_joueurs": "solo, on your phone",
+    "rdp_contenu": "3 towns, 15 monsters, 3 arena champions",
+    "rdp_langue": "French for now",
+    "rdp_cta": "Play Royaume de Poche"
   },
   "es": {
-    "title": "Cosmoth, juegos para noches con amigos",
-    "description": "Cosmoth es un pequeño estudio independiente que crea juegos para noches con amigos: Songe y Black Vigil, para jugar directamente en el navegador, sin cuenta.",
-    "og_description": "Songe y Black Vigil, dos juegos para jugar en el navegador, sin instalar nada ni crear una cuenta.",
+    "title": "Cosmoth, juegos para jugar en el navegador",
+    "description": "Cosmoth es un pequeño estudio independiente que crea juegos para jugar directamente en el navegador, sin cuenta: Songe, Black Vigil y Royaume de Poche.",
+    "og_description": "Songe, Black Vigil y Royaume de Poche: tres juegos para jugar en el navegador, sin instalar nada ni crear una cuenta.",
     "og_image_alt": "La polilla de Cosmoth atraída por una lámpara",
-    "accroche": "Un pequeño estudio independiente que hace juegos para noches con amigos. Se juegan en el navegador, sin instalar nada ni crear una cuenta.",
+    "accroche": "Un pequeño estudio independiente que hace juegos para compartir con amigos o disfrutar a solas. Se juegan en el navegador, sin instalar nada ni crear una cuenta.",
     "astuce": "Mueve la luz, la polilla la seguirá.",
     "astuce_touch": "Toca el cielo, la polilla seguirá la luz.",
     "nav_label": "Nuestros juegos",
@@ -87,6 +99,12 @@
     "lang_label": "Idioma",
     "vn_name": "Black Vigil",
     "vn_subtitle": "The Last of Nacre",
-    "vn_url": "https://veille-noire.vercel.app/?lang=en"
+    "vn_url": "https://veille-noire.vercel.app/?lang=en",
+    "rdp_subtitle": "Tres héroes, monstruos gruñones y un cetro hecho añicos",
+    "rdp_pitch": "El pequeño rey Pépin rompió el Cetro de las Estaciones al tropezar con la alfombra. Guía a tu equipo de héroes de ciudad en ciudad, aprovecha la debilidad de cada monstruo, consigue botín y vence a los campeones de las arenas. Viajar entre ciudades lleva tiempo real: vuelve más tarde, la aventura sigue sin ti.",
+    "rdp_joueurs": "en solitario, en el móvil",
+    "rdp_contenu": "3 ciudades, 15 monstruos, 3 campeones de arena",
+    "rdp_langue": "de momento, solo en francés",
+    "rdp_cta": "Jugar a Royaume de Poche"
   }
 }

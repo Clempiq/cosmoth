@@ -1,6 +1,6 @@
 # Cosmoth
 
-Site du studio Cosmoth : présentation du studio et liens vers ses jeux, Songe et Veille Noire. En français, anglais et espagnol.
+Site du studio Cosmoth : présentation du studio et liens vers ses jeux, Songe, Veille Noire et Royaume de Poche. En français, anglais et espagnol.
 
 En ligne : https://cosmoth.vercel.app (anglais : /en/, espagnol : /es/)
 

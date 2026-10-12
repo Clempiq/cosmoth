@@ -27,6 +27,7 @@
 @font-face{font-family:Figtree;font-weight:400;src:url(/assets/figtree-latin-400-normal.woff2) format("woff2");font-display:swap}
 @font-face{font-family:Figtree;font-weight:600;src:url(/assets/figtree-latin-600-normal.woff2) format("woff2");font-display:swap}
 @font-face{font-family:Syne;font-weight:800;src:url(/assets/syne-latin-800-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Lilita One";src:url(/assets/lilita-one-latin-400-normal.woff2) format("woff2");font-display:swap}
 @font-face{font-family:"Barlow Condensed";font-weight:800;src:url(/assets/barlow-condensed-latin-800-normal.woff2) format("woff2");font-display:swap}
 
 :root{
@@ -110,6 +111,20 @@ a{color:inherit}
 .equipe img{width:clamp(56px,6vw,76px);aspect-ratio:1;border-radius:50%;object-fit:cover;border:3px solid #0B1414;margin-left:-14px}
 .equipe img:first-child{margin-left:0}
 
+/* Royaume de Poche : ciel de printemps et lettres de bois */
+.royaume{background:linear-gradient(180deg,#7EC8F2 0%,#BFE6F7 46%,#9BD66E 46.2%,#6FB84A 100%);color:#3A2614;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(32px,5vw,80px);overflow:hidden}
+.royaume .texte{background:#F6EBD4;border:3px solid #6B3F1F;border-radius:22px;box-shadow:0 6px 0 rgba(67,38,17,.45);padding:clamp(22px,3vw,40px)}
+.royaume h2{font-family:"Lilita One",var(--sans);font-weight:400;font-size:clamp(52px,7vw,104px);color:#FFD84A;-webkit-text-stroke:3px #5A2D0C;paint-order:stroke fill;text-shadow:0 6px 0 #5A2D0C;transform:rotate(-2deg);transform-origin:left bottom}
+.royaume .sous-titre{font-family:var(--serif);color:#8F5A2E;font-size:clamp(19px,1.3vw + 12px,26px);margin-top:16px}
+.royaume .faits dt{color:#8F5A2E}
+.royaume .jouer{background:linear-gradient(#6FD05C,#3A8A2C);color:#fff;border:3px solid rgba(0,0,0,.4);box-shadow:0 5px 0 rgba(0,0,0,.3);font-family:"Lilita One",var(--sans);font-weight:400;font-size:20px;letter-spacing:.02em;text-shadow:0 2px 0 rgba(0,0,0,.3)}
+.royaume .jouer:hover{filter:brightness(1.06)}
+.troupe{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:clamp(260px,32vw,440px)}
+.troupe img{width:30%;max-width:190px;filter:drop-shadow(0 8px 0 rgba(40,70,20,.35));margin:0 -3%}
+.troupe img.mage{width:34%;max-width:215px;z-index:1}
+.troupe img.boss{position:absolute;top:0;right:0;width:36%;max-width:220px;filter:drop-shadow(0 8px 0 rgba(40,70,20,.3));animation:flotte 3s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-8px)}}
+
 /* ---------- Pied de page ---------- */
 .pied{background:var(--nuit-profonde);padding:56px var(--marge) calc(56px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;color:var(--brume);font-size:15px}
 .pied .nom{display:flex;align-items:center;gap:12px;font-family:var(--serif);color:var(--lune);font-size:24px}
@@ -119,11 +134,14 @@ a{color:inherit}
   .songe{grid-template-columns:1fr}
   .eventail{max-width:340px;order:-1}
   .veille{background-position:62% 50%}
+  .royaume{grid-template-columns:1fr}
+  .troupe{order:-1}
   .veille::before{background:linear-gradient(180deg,rgba(5,11,12,.55) 0%,rgba(5,11,12,.88) 55%,rgba(5,11,12,.95) 100%)}
 }
 @media (prefers-reduced-motion:reduce){
   .papillon .aile-g,.papillon .aile-d{animation:none}
   .eventail img{transition:none}
+  .troupe img.boss{animation:none}
 }
 </style>
 <!-- Vercel Web Analytics : visites anonymes, sans cookies -->
@@ -155,6 +173,7 @@ a{color:inherit}
   <nav class="sommaire" aria-label="{{nav_label}}">
     <a href="#songe">Songe</a>
     <a href="#veille-noire">{{vn_name}}</a>
+    <a href="#royaume-de-poche">Royaume de Poche</a>
   </nav>
 </header>
 
@@ -195,6 +214,25 @@ a{color:inherit}
       <img src="/assets/survivant-4.webp" alt="" width="360" height="360">
     </div>
     <a class="jouer" href="{{vn_url}}">{{vn_cta}}</a>
+  </section>
+  <section class="jeu royaume" id="royaume-de-poche" aria-labelledby="titre-royaume">
+    <div class="texte">
+      <h2 id="titre-royaume">Royaume<br>de Poche</h2>
+      <p class="sous-titre">{{rdp_subtitle}}</p>
+      <p class="pitch">{{rdp_pitch}}</p>
+      <dl class="faits">
+        <dt>{{f_joueurs}}</dt><dd>{{rdp_joueurs}}</dd>
+        <dt>{{f_contenu}}</dt><dd>{{rdp_contenu}}</dd>
+        <dt>{{f_langue}}</dt><dd>{{rdp_langue}}</dd>
+      </dl>
+      <a class="jouer" href="https://royaume-de-poche.vercel.app/">{{rdp_cta}}</a>
+    </div>
+    <div class="troupe" aria-hidden="true">
+      <img class="boss" src="/assets/rdp-champignard.webp" alt="" width="390" height="420" loading="lazy">
+      <img src="/assets/rdp-guerrier.webp" alt="" width="387" height="420" loading="lazy">
+      <img class="mage" src="/assets/rdp-mage.webp" alt="" width="330" height="420" loading="lazy">
+      <img src="/assets/rdp-rodeur.webp" alt="" width="320" height="420" loading="lazy">
+    </div>
   </section>
 </main>
 

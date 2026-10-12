@@ -14,6 +14,8 @@ const GAMES = [
     genre: { fr: "Jeu d'ambiance", en: 'Party game', es: 'Juego de fiesta' } },
   { name: 'Veille Noire', nameKey: 'vn_name', urlKey: 'vn_url', url: 'https://veille-noire.vercel.app/', image: 'https://veille-noire.vercel.app/assets/og.jpg', desc: 'vn_pitch', langs: ['fr', 'en'],
     genre: { fr: 'Jeu de plateau coopératif', en: 'Cooperative board game', es: 'Juego de tablero cooperativo' } },
+  { name: 'Royaume de Poche', url: 'https://royaume-de-poche.vercel.app/', image: 'https://royaume-de-poche.vercel.app/og.jpg', desc: 'rdp_pitch', langs: ['fr'],
+    genre: { fr: "Jeu de rôle d'aventure", en: 'Adventure role-playing game', es: 'Juego de rol de aventura' } },
 ];
 const page = await fs.readFile('src/page.html', 'utf8');
 const texts = JSON.parse(await fs.readFile('src/i18n.json', 'utf8'));
